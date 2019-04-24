@@ -44,7 +44,7 @@
 <span class="pysrc-output"></span><span class="pysrc-prompt">&gt;&gt;&gt; </span>emma = gutenberg.words(<span class="pysrc-string">'austen-emma.txt'</span>)</pre>
 <p><font id="30">让我们写一个简短的程序，通过循环遍历前面列出的<tt class="doctest"><span class="pre">gutenberg</span></tt>文件标识符列表相应的<tt class="doctest"><span class="pre">fileid</span></tt>，然后计算统计每个文本。</font><font id="31">为了使输出看起来紧凑，我们将使用<tt class="doctest"><span class="pre">round()</span></tt>舍入每个数字到最近似的整数。</font></p>
 <pre class="doctest"><span class="pysrc-prompt">&gt;&gt;&gt; </span><span class="pysrc-keyword">for</span> fileid <span class="pysrc-keyword">in</span> gutenberg.fileids():
-<span class="pysrc-more">... </span>    num_chars = len(gutenberg.raw(fileid)) <a href="./ch02.html#ref-raw-access"><img alt="[1]" class="callout" src="Images/eeff7ed83be48bf40aeeb3bf9db5550e.jpg"/></a>
+<span class="pysrc-more">... </span>    num_chars = len(gutenberg.raw(fileid)) <a href="./2.html#ref-raw-access"><img alt="[1]" class="callout" src="Images/eeff7ed83be48bf40aeeb3bf9db5550e.jpg"/></a>
 <span class="pysrc-more">... </span>    num_words = len(gutenberg.words(fileid))
 <span class="pysrc-more">... </span>    num_sents = len(gutenberg.sents(fileid))
 <span class="pysrc-more">... </span>    num_vocab = len(set(w.lower() <span class="pysrc-keyword">for</span> w <span class="pysrc-keyword">in</span> gutenberg.words(fileid)))
